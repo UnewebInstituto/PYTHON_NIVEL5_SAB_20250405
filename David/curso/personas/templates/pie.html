@@ -1,0 +1,19 @@
+
+{% if mensaje %}
+{% if tipo == 1 %}
+    <div class="alert alert-success">
+        <strong>Atención: </strong>{{ mensaje }}   
+    </div>
+{% elif tipo == 2 %}
+    <div class="alert alert-danger">
+        <strong>Error: </strong>{{ mensaje }}   
+    </div>
+{% elif tipo == 3 %}
+    <div class="alert alert-warning">
+        <strong>Alerta: </strong>{{ mensaje }}   
+    </div>
+{% endif %}                   
+{% endif %}
+</div>
+</body>
+</html>

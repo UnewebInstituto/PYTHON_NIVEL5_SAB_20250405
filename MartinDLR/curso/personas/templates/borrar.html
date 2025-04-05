@@ -1,0 +1,31 @@
+<!-- incluir encabezado -->
+{% include 'encabezado.html' %}
+
+<div>
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>Nombre</tr>
+      <tr>Apellido</tr>
+      <tr>Telefono</tr>
+      <tr>Correo</tr>
+      <tr>Accion</tr>
+
+    
+    </thead>
+    <tbody>
+      {% for dato in datos %}
+        <tr> 
+          <td>{{dato.nombre}}</td>
+          <td>{{dato.apellido}}</td>
+          <td>{{datos.telefono}}</td>
+          <td>{{dato.correo}}</td>
+          <td><a href=""><img class="accion" src="{% static 'img/borrar.png' %}" alt=""> </a></td>
+        </tr>
+      {% endfor %}
+    </tbody>
+
+  </table>
+  
+</div>
+<!-- incluir pie -->
+{% include 'pie.html' %}

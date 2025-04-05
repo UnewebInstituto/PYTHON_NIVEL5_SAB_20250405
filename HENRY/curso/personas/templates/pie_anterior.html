@@ -1,0 +1,11 @@
+
+        {% if mensajes %}
+            <div class="alert alert-info">
+                {% for msj in mensajes %}
+                    <strong>Atención:</strong>{{ msj }}
+                {% endfor %}
+            </div>
+        {% endif %}
+        </div>
+    </body>
+</html>

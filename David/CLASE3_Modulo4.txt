@@ -1,0 +1,214 @@
+Microsoft Windows [Versión 10.0.19045.4170]       
+(c) Microsoft Corporation. Todos los derechos reservados.
+
+C:\PYTHON_NIVEL4_SAB_20250315>cd henry
+
+C:\PYTHON_NIVEL4_SAB_20250315\HENRY>dir
+ El volumen de la unidad C no tiene etiqueta.     
+ El número de serie del volumen es: 0022-50E4     
+
+ Directorio de C:\PYTHON_NIVEL4_SAB_20250315\HENRY
+
+22/03/2025  13:24    <DIR>          .
+22/03/2025  13:24    <DIR>          ..
+15/03/2025  17:56             8,067 CLASE1.txt    
+22/03/2025  15:19               628 CLASE2.txt    
+15/03/2025  14:58    <DIR>          curso
+15/03/2025  18:02               421 git_commands.txt
+15/03/2025  13:53             1,560 notas.txt     
+15/03/2025  14:06    <DIR>          TEST
+               4 archivos         10,676 bytes    
+               4 dirs  614,379,036,672 bytes libres
+
+C:\PYTHON_NIVEL4_SAB_20250315\HENRY>cd test
+
+C:\PYTHON_NIVEL4_SAB_20250315\HENRY\TEST>dir
+ El volumen de la unidad C no tiene etiqueta.
+ El número de serie del volumen es: 0022-50E4
+
+ Directorio de C:\PYTHON_NIVEL4_SAB_20250315\HENRY\TEST
+
+15/03/2025  14:06    <DIR>          .
+15/03/2025  14:06    <DIR>          ..
+15/03/2025  14:06    <DIR>          Include
+15/03/2025  14:06    <DIR>          Lib
+15/03/2025  14:06               190 pyvenv.cfg
+15/03/2025  14:13    <DIR>          Scripts
+               1 archivos            190 bytes
+               5 dirs  614,381,928,448 bytes libres
+
+C:\PYTHON_NIVEL4_SAB_20250315\HENRY\TEST>cd scripts
+
+C:\PYTHON_NIVEL4_SAB_20250315\HENRY\TEST\Scripts>actiavte
+"actiavte" no se reconoce como un comando interno o externo,        
+programa o archivo por lotes ejecutable.
+
+C:\PYTHON_NIVEL4_SAB_20250315\HENRY\TEST\Scripts>
+C:\PYTHON_NIVEL4_SAB_20250315\HENRY\TEST\Scripts>
+C:\PYTHON_NIVEL4_SAB_20250315\HENRY\TEST\Scripts>activate
+
+(TEST) C:\PYTHON_NIVEL4_SAB_20250315\HENRY\TEST\Scripts>cd..
+
+(TEST) C:\PYTHON_NIVEL4_SAB_20250315\HENRY\TEST>cd..
+
+(TEST) C:\PYTHON_NIVEL4_SAB_20250315\HENRY>dir
+ El volumen de la unidad C no tiene etiqueta.
+ El número de serie del volumen es: 0022-50E4
+
+ Directorio de C:\PYTHON_NIVEL4_SAB_20250315\HENRY
+
+22/03/2025  13:24    <DIR>          .
+22/03/2025  13:24    <DIR>          ..
+15/03/2025  17:56             8,067 CLASE1.txt
+22/03/2025  15:19               628 CLASE2.txt
+15/03/2025  14:58    <DIR>          curso
+15/03/2025  18:02               421 git_commands.txt
+15/03/2025  13:53             1,560 notas.txt
+15/03/2025  14:06    <DIR>          TEST
+               4 archivos         10,676 bytes
+               4 dirs  614,363,324,416 bytes libres
+
+(TEST) C:\PYTHON_NIVEL4_SAB_20250315\HENRY>cd curso
+
+(TEST) C:\PYTHON_NIVEL4_SAB_20250315\HENRY\curso>dir
+ El volumen de la unidad C no tiene etiqueta.
+ El número de serie del volumen es: 0022-50E4
+
+ Directorio de C:\PYTHON_NIVEL4_SAB_20250315\HENRY\curso
+
+15/03/2025  14:58    <DIR>          .
+15/03/2025  14:58    <DIR>          ..
+15/03/2025  14:58               686 manage.py
+22/03/2025  14:07    <DIR>          personas
+               1 archivos            686 bytes
+               3 dirs  614,356,889,600 bytes libres
+
+(TEST) C:\PYTHON_NIVEL4_SAB_20250315\HENRY\curso>py manage.py 8001
+Unknown command: '8001'
+Type 'manage.py help' for usage.
+
+(TEST) C:\PYTHON_NIVEL4_SAB_20250315\HENRY\curso>py manage.py runserver 8001
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 29, 2025 - 14:09:17
+Django version 5.1.7, using settings 'personas.settings'
+Starting development server at http://127.0.0.1:8001/
+Quit the server with CTRL-BREAK.
+
+[29/Mar/2025 14:10:49] "GET / HTTP/1.1" 200 1168
+[29/Mar/2025 14:10:50] "GET /static/bootstrap/bootstrap.min.js HTTP/1.1" 304 0
+[29/Mar/2025 14:10:50] "GET /static/jquery/jquery.min.js HTTP/1.1" 304 0
+[29/Mar/2025 14:10:50] "GET /static/bootstrap/bootstrap.min.css HTTP/1.1" 304 0
+Not Found: /favicon.ico
+[29/Mar/2025 14:10:50] "GET /favicon.ico HTTP/1.1" 404 2975
+[29/Mar/2025 14:10:56] "GET /personas_ingresar/ HTTP/1.1" 200 1666
+
+
+cursor.execute("SELECT datname FROM pg_database WHERE datname LIKE '%personas%'")
+
+Microsoft Windows [Versión 10.0.19045.4170]
+(c) Microsoft Corporation. Todos los derechos reservados.
+
+C:\PYTHON_NIVEL4_SAB_20250315>cd henry
+
+C:\PYTHON_NIVEL4_SAB_20250315\HENRY>cd test
+
+C:\PYTHON_NIVEL4_SAB_20250315\HENRY\TEST>cd scripts
+
+C:\PYTHON_NIVEL4_SAB_20250315\HENRY\TEST\Scripts>activate
+
+(TEST) C:\PYTHON_NIVEL4_SAB_20250315\HENRY\TEST\Scripts>cd.
+
+(TEST) C:\PYTHON_NIVEL4_SAB_20250315\HENRY\TEST\Scripts>cd..
+
+(TEST) C:\PYTHON_NIVEL4_SAB_20250315\HENRY>cd curso      
+
+(TEST) C:\PYTHON_NIVEL4_SAB_20250315\HENRY\curso>dir     
+ El volumen de la unidad C no tiene etiqueta.
+ El número de serie del volumen es: 0022-50E4
+
+ Directorio de C:\PYTHON_NIVEL4_SAB_20250315\HENRY\curso 
+
+
+15/03/2025  14:58    <DIR>          .
+15/03/2025  14:58    <DIR>          ..
+15/03/2025  14:58               686 manage.py
+22/03/2025  14:07    <DIR>          personas
+               1 archivos            686 bytes           
+               3 dirs  610,818,961,408 bytes libres     
+                                                        g
+(TEST) C:\PYTHON_NIVEL4_SAB_20250315\HENRY\curso>py manage.py shell                                             3e.py shell
+Python 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03: 9) [MSC v.193539) [MSC v.1935 64 bit (AMD64)] on win32                e
+Type "help", "copyright", "credits" or "license" for mor  information. e information.
+(InteractiveConsole)
+>>> from django.db import connection
+>>> cursor = connection.cursor()
+>>> cursor.execute("SELECT datname FROM pg_database WHERE datname LIKE '%personas%'")
+>>> databases = cursor.fetchall()
+>>> databases
+[('personas_hd',), ('personas_eb',), ('personas_jp',), ('personas_dc',), ('personas_md',)]
+>>> for bd in databases:
+...     print(bd)
+... 
+('personas_hd',)
+('personas_eb',)
+('personas_jp',)
+('personas_dc',)
+('personas_md',)
+>>>
+
+(1---- AÑADIR EN setting.py)
+    'prueba',
+]
+(2---CREAR PRUEBA PARA LA MIGRACIÓN)
+(TEST) C:\PYTHON_NIVEL4_SAB_20250315\HENRY\curso>py manage.py startapp prueba       
+
+(3---VERIFICAR LA DEFINICIÓN PARA LA MIGRACIÓN)
+(TEST) C:\PYTHON_NIVEL4_SAB_20250315\HENRY\curso>py manage.py check prueba
+System check identified no issues (0 silenced).
+
+(4---DEFINIR EL CONTENIDO DEL ARCHIVO models.py)
+
+(5---CREAR LA MIGRACIÓN)
+(TEST) C:\PYTHON_NIVEL4_SAB_20250315\HENRY\curso>py manage.py makemigrations        
+Migrations for 'prueba':
+  prueba\migrations\0001_initial.py    + Create model Contactos
+
+
+(6---CREAR EL MODELO)
+p
+BEGIN;
+--
+-- Create model Contactos
+--
+CREATE TABLE "prueba_contactos" ("id" bigint NOT NULL PRIMARY KEY GENERATED BY DEFAULT AS IDENTITY, "nombre" varchar(255) NOT NULL, "apellido" varchar(255) NOT NULL, "correo" varchar(255) NOT NULL UNIQUE, "telefono" varchar(255) NOT NULL);
+CREATE INDEX "prueba_contactos_correo_bd48159f_like" 
+ON "prueba_contactos" ("correo" varchar_pattern_ops);COMMIT;
+
+(7---CREAR LAS TABLAS)
+py manage.py migrate
+
+
+(TEST) C:\PYTHON_NIVEL4_SAB_20250315\HENRY\curso>py manage.py migrate 
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, prueba, sessions   
+Running migrations:
+  Applying prueba.0002_alter_contactos_apellido_alter_contactos_correo_and_more... OK
+
+(TEST) C:\PYTHON_NIVEL4_SAB_20250315\HENRY\curso>python manage.py shell
+Python 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+
+(InteractiveConsole)
+>>> from prueba.models import Contactos
+>>> p1 = Contactos(nombre='ANA', apellido='VASQUEZ', telefono='+58 414 1234567', correo='av@gmail.com')
+>>> p1.save()
+>>>
+
+>>> resultado_contactos = Contactos.objects.all()
+
+>>> resultado_contactos  
+<QuerySet [<Contactos: ANA VASQUEZ av@gmail.com +58 414 1234567>]>
+>>>

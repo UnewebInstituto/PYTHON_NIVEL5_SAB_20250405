@@ -1,0 +1,221 @@
+1) INSTALAR PYTHON.
+2) INSTALAR ENTORNO VIRTUAL.
+pip install virtualenv --user 
+3) CREAR EL ENTORNO VIRTUAL DE CADA PROYECTO. 
+https://docs.python.org/3/tutorial/venv.html
+
+python -m venv TEST
+
+4) ACTIVACIÓN DEL ENTORNO VIRTUAL:
+TEST\SCRIPTS\activate 
+Desactovación
+TEST\SCRIPTS\deactivate 
+
+5) INSTALACIÓN DE DJANGO SOBRE EL ENTORNO VIRTUAL.
+py -m pip install Django 
+
+python -m pip install Django --user
+
+
+6) INSTALAR LA BASE DE DATOS A EMPLEAR. EN NUESTRO CASO: 
+pip install psycopg2
+
+7) (TEST) C:\PYTHON_NIVEL4_SAB_20250315\HENRY>md curso
+
+(TEST) C:\PYTHON_NIVEL4_SAB_20250315\HENRY>django-admin 
+startproject personas curso
+
+(TEST) C:\PYTHON_NIVEL4_SAB_20250315\HENRY>dir
+
+8) Uso de manage.py
+py manage.py help
+python manage.py help
+
+WSGI, que significa Web Server Gateway Interface, es una especificación que define cómo un servidor web se comunica con aplicaciones web escritas en Python. Esta interfaz estandariza la forma en que las aplicaciones Python interactúan con los servidores web, permitiendo que diferentes servidores y aplicaciones sean interoperables.
+
+CREAR LA BASE DE DATOS:
+Server [localhost]:
+Database [postgres]:
+Port [5432]:
+Username [postgres]:
+Contraseña para usuario postgres:
+psql (16.3)
+ADVERTENCIA: El código de página de la consola (850) difiere del código
+            de página de Windows (1252).
+            Los caracteres de 8 bits pueden funcionar incorrectamente.
+            Vea la página de referencia de psql «Notes for Windows users»
+            para obtener más detalles.
+Digite «help» para obtener ayuda.
+
+postgres=# create database personas_hd;
+CREATE DATABASE
+postgres=#
+
+
+MIGRACIÓN DE LA BASE DE DATOS
+
+python manage.py migrate
+
+CREACIÓN DEL SUPER USUARIO:
+(TEST) C:\PYTHON_NIVEL4_SAB_20250315\HENRY\curso>py manage.py createsuperuser
+Username (leave blank to use 'profesor'): admin
+Email address: hduqueuneweb@gmail.com
+Password: 
+Password (again): 
+Superuser created successfully.
+
+(TEST) C:\PYTHON_NIVEL4_SAB_20250315\HENRY\curso>
+Clave:
+Uneweb*1
+
+
+LEVANTAR EL servidor
+
+C:\PYTHON_NIVEL4_SAB_20250315\HENRY\curso>py manage.py runserver      
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 15, 2025 - 16:57:51
+Django version 5.1.7, using settings 'personas.settings'
+Starting development server at http://127.0.0.1:8000/   
+Quit the server with CTRL-BREAK.
+
+https://docs.djangoproject.com/en/5.1/intro/tutorial02/
+
+
+#### Cómo instalar Bootstrap en un proyecto Django
+
+Para integrar Bootstrap en tu proyecto Django, tienes dos opciones principales: usar un CDN (Content Delivery Network) o instalar Bootstrap localmente. A continuación, te explico ambas formas.
+
+### Opción 1: Usar un CDN
+
+1. **Agrega el enlace a Bootstrap en tu plantilla HTML**: Abre el archivo HTML donde deseas utilizar Bootstrap (por ejemplo, `base.html`) y agrega el siguiente código dentro de la sección `<head>`:
+
+   ```html
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+   ```
+
+   También puedes agregar el script de Bootstrap justo antes de cerrar la etiqueta `</body>`:
+
+   ```html
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+   ```
+
+2. **Utiliza las clases de Bootstrap**: Ahora puedes usar las clases de Bootstrap en tus elementos HTML para aplicar estilos y componentes.
+
+### Opción 2: Instalar Bootstrap localmente
+
+1. **Descarga Bootstrap**: Ve al [sitio oficial de Bootstrap](https://getbootstrap.com/) y descarga la versión que desees.
+
+2. **Agrega Bootstrap a tu proyecto**: Descomprime el archivo descargado y copia las carpetas `css` y `js` en el directorio de tu proyecto Django, preferiblemente dentro de una carpeta llamada `static` (por ejemplo, `myproject/static/bootstrap/`).
+
+3. **Configura Django para servir archivos estáticos**: Asegúrate de que tu configuración de Django esté lista para manejar archivos estáticos. En tu archivo `settings.py`, verifica que tengas configurado lo siguiente:
+
+   ```python
+   STATIC_URL = '/static/'
+   ```
+
+4. **Agrega los archivos de Bootstrap en tu plantilla HTML**: En tu archivo HTML, enlaza los archivos CSS y JS de Bootstrap que copiaste:
+
+   ```html
+   <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+   <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+   ```
+
+   Asegúrate de que has importado el módulo de `static` en la parte superior de tu archivo HTML:
+
+   ```html
+   {% load static %}
+   ```
+
+### Conclusión
+
+Con cualquiera de estas dos opciones, podrás utilizar Bootstrap en tu proyecto Django. La opción del CDN es más rápida y fácil, mientras que la instalación local te permite tener más control sobre los archivos. Si necesitas más ayuda sobre cómo utilizar Bootstrap o cualquier otro tema relacionado, ¡no dudes en preguntar!
+
+
+#### Cómo combinar archivos HTML en Django
+
+En Django, puedes combinar archivos HTML utilizando el sistema de plantillas que permite la **herencia de plantillas** y la inclusión de otras plantillas. Esto es útil para mantener tu código organizado y reutilizar componentes comunes en diferentes páginas. Aquí te explico cómo hacerlo:
+
+### 1. Herencia de Plantillas
+
+La herencia de plantillas te permite crear una plantilla base que contenga la estructura común de tu sitio web, y luego extenderla en otras plantillas.
+
+#### Paso a paso:
+
+1. **Crea una plantilla base**: Crea un archivo llamado `base.html` en tu directorio de plantillas. Este archivo contendrá la estructura común, como el encabezado y el pie de página.
+
+   ```html
+   <!DOCTYPE html>
+   <html lang="es">
+   <head>
+       <meta charset="UTF-8">
+       <title>{% block title %}Título por defecto{% endblock %}</title>
+       <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+   </head>
+   <body>
+       <header>
+           <h1>Mi Sitio Web</h1>
+           <nav>
+               <!-- Navegación -->
+           </nav>
+       </header>
+
+       <main>
+           {% block content %}
+           <!-- Contenido específico de la página -->
+           {% endblock %}
+       </main>
+
+       <footer>
+           <p>Derechos reservados &copy; 2025</p>
+       </footer>
+   </body>
+   </html>
+   ```
+
+2. **Extiende la plantilla base**: Crea otra plantilla, por ejemplo `pagina.html`, que extienda de `base.html`.
+
+   ```html
+   {% extends 'base.html' %}
+
+   {% block title %}Título de la Página{% endblock %}
+
+   {% block content %}
+   <h2>Contenido de la Página</h2>
+   <p>Este es el contenido específico de esta página.</p>
+   {% endblock %}
+   ```
+
+### 2. Inclusión de Plantillas
+
+Si deseas incluir un fragmento de HTML en varias plantillas, puedes crear un archivo separado y usar la etiqueta `{% include %}`.
+
+#### Paso a paso:
+
+1. **Crea un archivo de plantilla parcial**: Por ejemplo, crea un archivo llamado `_navbar.html` que contenga el código de la barra de navegación.
+
+   ```html
+   <nav>
+       <ul>
+           <li><a href="/">Inicio</a></li>
+           <li><a href="/about/">Acerca de</a></li>
+           <li><a href="/contact/">Contacto</a></li>
+       </ul>
+   </nav>
+   ```
+
+2. **Incluye la plantilla parcial en otras plantillas**: En tu `base.html` o en cualquier otra plantilla, puedes incluir la barra de navegación de la siguiente manera:
+
+   ```html
+   <header>
+       <h1>Mi Sitio Web</h1>
+       {% include 'partials/_navbar.html' %}
+   </header>
+   ```
+
+### Conclusión
+
+Usando la herencia de plantillas y la inclusión de plantillas en Django, puedes combinar archivos HTML de manera efectiva, lo que te permite mantener tu código limpio y organizado. Si tienes más preguntas sobre Django o necesitas más ejemplos, ¡no dudes en preguntar!
+

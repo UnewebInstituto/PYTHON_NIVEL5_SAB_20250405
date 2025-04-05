@@ -1,0 +1,31 @@
+<!-- incluir encabezado -->
+{% include 'encabezado.html' %}
+
+<div>
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <tn>Nombre</tn>
+                <tn>Apellido</tn>
+                <tn>Telefono</tn>
+                <tn>Correo</tn>
+                <tn>Accion</tn>
+            </tr>                
+        </thead>
+
+        <tbody>
+            {% for dato in datos %}
+            <tr>
+                <tn>{{dato.nombre}}</tn>
+                <tn>{{dato.apellido}}</tn>
+                <tn>{{dato.telefono}}</tn>
+                <tn>{{dato.correo}}</tn>
+                <td><button class="btn btn btn-warning">Borrar</button></td>
+            </tr>    
+            {% endfor %}            
+        </tbody>
+
+    </table>
+</div>
+<!-- incluir pie -->
+{% include 'pie.html' %}

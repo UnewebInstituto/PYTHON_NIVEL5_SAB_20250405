@@ -1,0 +1,37 @@
+<!-- incluir encabezado -->
+{% include 'encabezado.html' %}
+
+<div>
+  {% csrf_token %}
+  <table class="table table-bordered table-hover">
+    
+      <thead>
+      <tr>
+         <th>Nombre</th>
+         <th>Apellido</th>
+         <th>Correo</th>
+         <th>Telefono</th>
+         <th>Accion</th>
+        </tr>
+         </thead>
+
+    </thead>
+     
+    <tbody>
+      {%for dato in datos %}
+      <tr>
+      <td>{{dato.nombre}}</td>
+      <td>{{dato.apellido}}</td>
+      <td>{{dato.correo}}</td>
+      <td>{{dato.telefono}}</td>
+      <td><button class=" btn-warning">Borrar</button></td>
+    </tr>
+    {%endfor%}
+    </tbody>
+    
+
+  </table>
+    
+  </div>
+<!-- incluir pie -->
+{% include 'pie.html' %}

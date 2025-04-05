@@ -1,0 +1,13 @@
+TEMPLATE Y CONTENTS:
+(TEST) C:\PYTHON_NIVEL4_SAB_20250315\HENRY\curso>py manage.py shell
+Python 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.        
+(InteractiveConsole)
+>>> from __future__ import print_function
+>>> from django import template
+C>>> t = template.Template('Alumnos del curso de Django:{{a1}},{{a2}},{{a3}},{{a4}}') 
+>>> 
+>>> c = template.Context({'a1':'MARTIN','a2':'JOSE','a3':'EFRENYER','a4':'DAVID'})
+>>> print(t.render(c))
+Alumnos del curso de Django:MARTIN,JOSE,EFRENYER,DAVID
+>>>

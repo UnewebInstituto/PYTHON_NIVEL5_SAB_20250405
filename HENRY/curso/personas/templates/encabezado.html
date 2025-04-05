@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'bootstrap/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <script src="{% static 'jquery/jquery.min.js' %}"></script>
+<script src="{% static 'bootstrap/bootstrap.min.js' %}"></script>
+    <title>Proyecto Personas</title>
+</head>
+<body>
+    <div class="container">
+      <h1>Proyecto Personas</h1>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <a class="navbar-brand" href="#">Personas</a>
+              </div>
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="/">Inicio</a></li>
+                <li><a href="personas_ingresar/">Ingresar</a></li>
+                <li><a href="/personas_consultar/">Consultar</a></li>
+                <li><a href="/personas_borrar/">Borrar</a></li>
+                <li><a href="#">Actualizar</a></li>
+                <li><a href="#">Reportes</a></li>
+              </ul>
+            </div>
+          </nav>

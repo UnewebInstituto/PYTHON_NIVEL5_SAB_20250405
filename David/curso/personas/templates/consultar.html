@@ -1,0 +1,15 @@
+<!-- incluir encabezado -->
+{% include 'encabezado.html' %}
+
+<form action="/personas_consultar01/" method="POST">
+  {% csrf_token %}
+  <div class="row">
+    <div class="form-group col-md-6">
+      <label for="correo">Correo Electrónico:</label>
+      <input type="email" class="form-control" id="correo" name="correo">
+    </div>
+  </div>
+    <button type="submit" class="btn btn-primary">Buscar</button>
+  </form>
+<!-- incluir pie -->
+{% include 'pie.html' %}

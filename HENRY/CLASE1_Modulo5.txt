@@ -1,0 +1,87 @@
+Microsoft Windows [Versión 10.0.19045.4170]
+(c) Microsoft Corporation. Todos los derechos reservados.
+
+C:\PYTHON_NIVEL5_SAB_20250405>CD HENRY
+
+C:\PYTHON_NIVEL5_SAB_20250405\HENRY>CD curso
+
+C:\PYTHON_NIVEL5_SAB_20250405\HENRY\curso>cd test
+El sistema no puede encontrar la ruta especificada.
+
+C:\PYTHON_NIVEL5_SAB_20250405\HENRY\curso>cd..
+
+C:\PYTHON_NIVEL5_SAB_20250405\HENRY>cd test
+
+C:\PYTHON_NIVEL5_SAB_20250405\HENRY\TEST>cd scripts 
+
+C:\PYTHON_NIVEL5_SAB_20250405\HENRY\TEST\Scripts>activate
+
+(TEST) C:\PYTHON_NIVEL5_SAB_20250405\HENRY\TEST\Scripts>cd..
+
+(TEST) C:\PYTHON_NIVEL5_SAB_20250405\HENRY\TEST>cd..  
+
+(TEST) C:\PYTHON_NIVEL5_SAB_20250405\HENRY>cd curso
+
+(TEST) C:\PYTHON_NIVEL5_SAB_20250405\HENRY\curso>python manage.py shell
+Python 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from prueba.models import Contactos
+>>> lista_contactos = Contactos.all()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: type object 'Contactos' has no attribute 'all'
+>>> lista_contactos = Contactos.objects.all() 
+>>> lista_contactos
+<QuerySet [<Contactos: ANA VASQUEZ av@gmail.com +58 414 1234567>, <Contactos: YOLANDA TORTOZA YTORTOZA@GMAIL.COM +58 212 9876543>, <Contactos: LILIANA PEREZ LPEREZ@GMAIL.COM +58 212 9876543>, <Contactos: NELLY CONTRERAS NC@GMAIL.COM +58 212 9876543>, <Contactos: NELLY CONTRERAS NC1@GMAIL.COM +58 212 9876543>, <Contactos: MAIBA ROMERO MR@GMAIL.COM +58 212 9876543>, <Contactos: SOFIA CHAN SCHAN@GMAIL.COM +58 212 9876543>]>        
+>>> contacto = lista_contactos.filter(correo='YTORTOZA@GMAIL.COM')
+>>> contacto
+<QuerySet [<Contactos: YOLANDA TORTOZA YTORTOZA@GMAIL.COM +58 212 9876543>]>
+>>> contacto.nombre
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: 'QuerySet' object has no attribute 'nombre'
+>>> contacto = Contactos.objetcs.get(correo='YTORTOZA@GMAIL.COM')
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: type object 'Contactos' has no attribute 'objetcs'. Did you mean: 'objects'?
+>>> contacto = Contactos.objects.get(correo='YTORTOZA@GMAIL.COM')
+>>> contacto.nombre
+'YOLANDA'
+>>> contacto.apellido
+'TORTOZA'
+>>> contacto.correo  
+'YTORTOZA@GMAIL.COM'
+>>> contacto.telefono
+'+58 212 9876543'
+>>> contacto = Contactos.objects.get(correo='YTORTOZA1@GMAIL.COM')
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "C:\PYTHON_NIVEL4_SAB_20250315\HENRY\TEST\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PYTHON_NIVEL4_SAB_20250315\HENRY\TEST\Lib\site-packages\django\db\models\query.py", line 649, in 
+get
+    raise self.model.DoesNotExist(
+prueba.models.Contactos.DoesNotExist: Contactos matching query does not exist.
+>>>             {% endif %}            {% endif %}
+
+
+
+ICONOS 
+https://www.flaticon.es/resultados?word=borrar
+
+
+>>> from prueba.models import Contactos
+>>> lista_contactos = Contactos.all()  
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: type object 'Contactos' has no attribute 'all'
+>>> lista_contactos = Contactos.objects.all() 
+>>> lista_contactos
+<QuerySet [<Contactos: ANA VASQUEZ av@gmail.com +58 414 1234567>, <Contactos: YOLANDA TORTOZA YTORTOZA@GMAIL.COM +58 212 9876543>, <Contactos: LILIANA PEREZ LPEREZ@GMAIL.COM +58 212 9876543>, <Contactos: NELLY CONTRERAS NC@GMAIL.COM +58 212 9876543>, <Contactos: NELLY CONTRERAS NC1@GMAIL.COM +58 212 9876543>, <Contactos: MAIBA ROMERO MR@GMAIL.COM +58 212 9876543>, <Contactos: SOFIA CHAN SCHAN@GMAIL.COM +58 212 9876543>]>
+>>> lista_contactos[0]
+<Contactos: ANA VASQUEZ av@gmail.com +58 414 1234567>
+>>> lista_contactos[0].nombre
+'ANA'
+>>>

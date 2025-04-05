@@ -1,0 +1,29 @@
+<!-- incluir encabezado -->
+{% include 'encabezado.html' %}
+
+<form action="/personas_ingresar01/" method="POST">
+  {% csrf_token %}
+  <div class="row">
+    <div class="form-group col-md-6">
+        <label for="nombre">Nombre:</label>
+        <input type="text" class="form-control" id="nombre" name="nombre">
+    </div>
+    <div class="form-group col-md-6">
+        <label for="apellido">Apellido:</label>
+        <input type="text" class="form-control" id="apellido" name="apellido">
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group col-md-6">
+      <label for="correo">Correo Electrónico:</label>
+      <input type="email" class="form-control" id="correo" name="correo">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="telefono">Teléfono:</label>
+      <input type="text" class="form-control" id="telefono" name="telefono">
+    </div>
+  </div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+  </form>
+<!-- incluir pie -->
+{% include 'pie.html' %}
