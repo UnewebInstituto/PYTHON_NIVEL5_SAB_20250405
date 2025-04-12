@@ -23,6 +23,14 @@ from personas.views import personas_ingresar01
 from personas.views import personas_consultar
 from personas.views import personas_consultar01
 from personas.views import personas_borrar
+from personas.views import personas_borrar01
+from personas.views import personas_actualizar
+from personas.views import personas_actualizar01
+from personas.views import personas_actualizar02
+from personas.views import personas_reporte
+from personas.views import personas_reporte_json
+from personas.views import personas_reporte_xml
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -32,6 +40,13 @@ urlpatterns = [
     path('personas_consultar/', personas_consultar),
     path('personas_consultar01/', personas_consultar01), 
     path('personas_borrar/', personas_borrar),
+    path('personas_borrar01/', personas_borrar01),
+    path('personas_actualizar/', personas_actualizar),
+    path('personas_actualizar01/', personas_actualizar01),
+    path('personas_actualizar02/', personas_actualizar02),
+    path('personas_reporte/', personas_reporte),
+    path('personas_api_json/', personas_reporte_json),
+    path('personas_api_xml/', personas_reporte_xml),
 ]
 
 # path('', inicio1),

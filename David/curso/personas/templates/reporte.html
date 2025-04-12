@@ -10,7 +10,6 @@
                 <th>Apellido</th>
                 <th>Teléfono</th>
                 <th>Correo</th>
-                <th>Acción</th>
             </tr>
         </thead>
         <tbody>
@@ -20,7 +19,6 @@
                     <td>{{dato.apellido}}</td>
                     <td>{{dato.telefono}}</td>
                     <td>{{dato.correo}}</td>
-                    <td><a href="/personas_borrar01/?id={{dato.id}}" class="btn btn-warning">Borrar</td>
                 </tr>
             {% endfor %}
         </tbody>
