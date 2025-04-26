@@ -30,6 +30,7 @@ from personas.views import personas_actualizar02
 from personas.views import personas_reporte
 from personas.views import personas_reporte_json
 from personas.views import personas_reporte_xml
+from personas.views import personas_procesa_json
 
 
 urlpatterns = [
@@ -47,6 +48,7 @@ urlpatterns = [
     path('personas_reporte/', personas_reporte),
     path('personas_api_json/', personas_reporte_json),
     path('personas_api_xml/', personas_reporte_xml),
+    path('personas_procesa_json/', personas_procesa_json),
 ]
 
 # path('', inicio1),

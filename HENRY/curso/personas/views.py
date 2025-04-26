@@ -237,3 +237,8 @@ def personas_reporte_xml(request):
       xml_str = ET.tostring(root, encoding='utf-8', method='xml').decode('utf-8')
       
       return HttpResponse(xml_str, content_type='application/xml', status=500)  # Retornar error en formato XML
+
+def personas_procesa_json(request):
+  mensaje = ''
+  tipo = ''
+  return render(request, 'reporte_json.html', {'mensaje': mensaje, 'tipo': tipo})

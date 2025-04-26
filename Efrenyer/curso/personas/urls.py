@@ -17,10 +17,6 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-
-
-#from personas.views import inicio1
-
 from personas.views import principal
 from personas.views import personas_ingresar
 from personas.views import personas_ingresar01
@@ -34,14 +30,10 @@ from personas.views import personas_actualizar02
 from personas.views import personas_reporte
 from personas.views import personas_reporte_json
 from personas.views import personas_reporte_xml
-
-
+from personas.views import personas_procesa_json
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-   
-   
-    
     path('', principal),
     path('personas_ingresar/', personas_ingresar),
     path('personas_ingresar01/', personas_ingresar01),
@@ -52,9 +44,8 @@ urlpatterns = [
     path('personas_actualizar/', personas_actualizar),
     path('personas_actualizar01/', personas_actualizar01),
     path('personas_actualizar02/', personas_actualizar02),
-    path('personas_reporte',personas_reporte), 
+    path('personas_reporte/', personas_reporte),
     path('personas_api_json/', personas_reporte_json),
     path('personas_api_xml/', personas_reporte_xml),
+    path('personas_procesa_json/', personas_procesa_json),
 ]
-
-# path('', inicio1),
